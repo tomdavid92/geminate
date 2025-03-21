@@ -8,11 +8,13 @@ struct SplashView: View {
             HomeView()
         } else {
             VStack {
-                Image("AppLogo") // Make sure to add your app logo to Assets.xcassets
+                Image("logo-standalone")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.white)
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     withAnimation {
