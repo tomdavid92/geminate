@@ -131,6 +131,11 @@ struct ResultView: View {
     
     // Process the image with Gemini when the view loads
     private func processImageWithGemini() {
+        guard Secrets.geminiApiKey != "YOUR_API_KEY_HERE" else {
+            errorMessage = "Please set up your Gemini API key in Secrets.swift"
+            return
+        }
+        
         isLoading = true
         errorMessage = nil
         
@@ -153,6 +158,11 @@ struct ResultView: View {
     
     // Apply a new prompt to the current image
     private func applyNewPrompt() {
+        guard Secrets.geminiApiKey != "YOUR_API_KEY_HERE" else {
+            errorMessage = "Please set up your Gemini API key in Secrets.swift"
+            return
+        }
+        
         isLoading = true
         errorMessage = nil
         

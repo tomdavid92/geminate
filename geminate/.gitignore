@@ -16,4 +16,5 @@ DerivedData/
 !default.perspectivev3
 
 # API Keys
-Secrets.swift 
+Secrets.swift
+!Secrets.example.swift 
